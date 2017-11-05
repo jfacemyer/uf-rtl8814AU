@@ -8,9 +8,9 @@ else
 fi
 
 DRV_NAME=rtl8814AU
-DRV_VERSION=4.3.21
-mkdir /usr/src/${DRV_NAME}-${DRV_VERSION}
-git archive driver-${DRV_VERSION} | tar -x -C /usr/src/${DRV_NAME}-${DRV_VERSION}
+DRV_VERSION=4.13.0
+mkdir -p /usr/src/${DRV_NAME}-${DRV_VERSION}
+git archive uf-driver-${DRV_VERSION} | tar -x -C /usr/src/${DRV_NAME}-${DRV_VERSION}
 dkms add -m ${DRV_NAME} -v ${DRV_VERSION}
 dkms build -m ${DRV_NAME} -v ${DRV_VERSION}
 dkms install -m ${DRV_NAME} -v ${DRV_VERSION}

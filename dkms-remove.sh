@@ -8,7 +8,7 @@ else
 fi
 
 DRV_NAME=rtl8814AU
-DRV_VERSION=4.3.21
+DRV_VERSION=4.13.0
 
 dkms remove ${DRV_NAME}/${DRV_VERSION} --all
 RESULT=$?
